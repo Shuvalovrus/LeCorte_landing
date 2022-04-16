@@ -1,0 +1,128 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,*:before,*:after{
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/* /RESET */
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+// /FONTS
+
+// COMMON VARIABLE
+$MONTSERRAT: 'Montserrat', sans-serif;
+
+$montserrat-regular: 400;
+$montserrat-medium: 500;
+$montserrat-sb: 600;
+$pf-bold: 700;
+
+$DARK-BLOCK-BGC: #282828;
+$ACCENT-BLOCK-BGC: #E6E3C4;
+$ACCENT-DIFFERENT: #998431;
+
+$SECTION-TITLE-FS: 36px;
+$SECTION-SUB0TITLE-FS:16px;
+// /COMMON
+
+// COMMON STYLE
+[class*="__container"] {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $MONTSERRAT;
+}
+// /COMMON STYLE
+
+// HEADER
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.header__container {
+
+}
+.header__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 69px;
+    font-weight: $montserrat-medium;
+    font-size: 13px;
+    line-height: 19.5px;
+}
+.header__menu {
+}
+//===========================
+.contacts {
+}
+.contacts__address,
+.contacts__number {
+    //color: #FFFFFF;
+}
+.contacts__address {
+}
+.contacts__number {
+}
+//===========================
+.menu {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    font-weight: $montserrat-regular;
+    font-size: 14px;
+    line-height: 21px;
+}
+.menu__list {
+    display: flex;
+    width: 100%;
+    min-height: 45px;
+    align-items: center;
+}
+.menu__item {
+    flex: 0 1 25%;
+    text-align: center;
+    border-right: 1px solid #FFFFFF;
+}
+.menu__item:last-child {
+    border: none;
+}
+.menu__link {
+    //color: #FFFFFF;
+}
+// /HEADER
