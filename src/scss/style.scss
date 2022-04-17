@@ -302,7 +302,6 @@ body {
 .novelties__sub-image {
     flex: 0 1 47.2%;
 }
-
 //==================================
 .items-wine {
 }
@@ -340,3 +339,75 @@ body {
 .items-wine__description {
 }
 // /NOVELTIES
+// TASTING
+.tasting {
+    padding: 130px 0 100px 0;
+    background-color: $DARK-BLOCK-BGC;
+}
+.tasting__container {
+}
+.tasting__content {
+    padding: 105px 0 80px 0;
+    text-align: center;
+    border: 3px solid #C4C4C4;
+}
+.tasting__inner-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 540px;
+    //padding: 0 15px;
+}
+.tasting__title {
+    padding: 0 50px;
+    margin: 0 auto;
+    display: block;
+    z-index: 10;
+    top: -134px;
+    left: 0;;
+    right: 0;
+    position: absolute;
+    background-color: $DARK-BLOCK-BGC;
+}
+.tasting__subtitle {
+    color: #FFFFFF;
+    margin-bottom: 80px;
+}
+.tasting__form {
+}
+//==================================
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form__input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.form__input {
+    width: 254px;
+}
+.form__input::placeholder {
+    color: #ffffff;
+}
+.form__input,
+.form__select {
+    padding-bottom: 10px;
+    background-color: $DARK-BLOCK-BGC;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.form__select {
+    margin-bottom: 50px;
+}
+.form__button {
+    padding: 15px 0;
+    border: 1px solid #ffffff;
+    background-color: $DARK-BLOCK-BGC;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+// /TASTING
