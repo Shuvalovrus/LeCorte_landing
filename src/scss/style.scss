@@ -127,14 +127,10 @@ body {
 //===========================
 .contacts {
 }
-.contacts__address,
-.contacts__number {
+.contacts__item {
     color: #FFFFFF;
 }
-.contacts__address {
-}
-.contacts__number {
-}
+
 //===========================
 .menu {
     border-top: 1px solid #FFFFFF;
@@ -152,7 +148,6 @@ body {
     flex: 0 1 25%;
     text-align: center;
     border-right: 1px solid #FFFFFF;
-    cursor: pointer;
 }
 .menu__item:last-child {
     border: none;
@@ -347,9 +342,33 @@ body {
 .tasting__container {
 }
 .tasting__content {
+    position: relative;
     padding: 105px 0 80px 0;
     text-align: center;
     border: 3px solid #C4C4C4;
+}
+.tasting__content::before,
+.tasting__content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-size: cover;
+    z-index: 10;
+}
+
+.tasting__content::before {
+    top: -69px;
+    left: -30px;
+    width: 260px;
+    height: 260px;
+    background-image: url("@img/grapes.svg");
+}
+.tasting__content::after {
+    top: -65px;
+    right: -53px;
+    width: 260px;
+    height: 200px;
+    background-image: url("@img/cask.svg");
 }
 .tasting__inner-wrapper {
     position: relative;
@@ -409,5 +428,52 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.form__button:hover {
+    background-color: $ACCENT-BLOCK-BGC;
+    color: #282828;
 }
 // /TASTING
+// FOOTER
+.footer {
+    background-color: $ACCENT-DIFFERENT;
+    padding: 50px 0;
+}
+.footer__container {
+}
+.footer__contacts {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 93px 20px 94px;
+    border-top: 1px solid #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+}
+.footer__menu {
+}
+.footer__menu .menu__link {
+    text-transform: uppercase;
+}
+.footer__menu .menu__link:hover {
+    background-color: $ACCENT-DIFFERENT;
+}
+
+.menu__socials {
+    display: flex;
+    padding: 0 57px;
+    align-items: center;
+    height: 100%;
+}
+.socials-links {
+}
+.socials-links__item {
+    margin-right: 35px;
+}
+.socials-links__link {
+}
+.socials-links__item:last-child {
+    margin-right: 0;
+}
+// /FOOTER
+
