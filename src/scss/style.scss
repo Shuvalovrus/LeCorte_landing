@@ -62,7 +62,6 @@ $SECTION-SUB0TITLE-FS:16px;
     padding: 0 15px;
     margin: 0 auto;
 }
-
 body {
     font-family: $MONTSERRAT;
 }
@@ -93,17 +92,15 @@ body {
 .button_black {
     background-color: #282828;
 }
-.text-block {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #282828;
-    max-width: 445px;
-}
 .rectangle {
     width: 160px;
     height: 1px;
     background-color: #ffffff;
+}
+@media (max-width: 991.98px) {
+    .text-block {
+        margin: 0 auto 30px auto;
+    }
 }
 // /COMMON STYLE
 
@@ -242,8 +239,6 @@ body {
     justify-content: space-between;
 }
 .novelties__description {
-    //display: flex;
-    //flex-direction: column;
     flex: 0 1 40%;
 }
 .novelties__designation {
@@ -263,10 +258,6 @@ body {
 .novelties__rectangle {
     margin-bottom: 30px;
 }
-.novelties__subtitle {
-    margin-bottom: 30px;
-    text-shadow: 1px 1px #ffffff;
-}
 .novelties__items {
     display: flex;
     flex-direction: column;
@@ -275,6 +266,12 @@ body {
 .novelties__text {
     margin-bottom: 30px;
     text-shadow: 1px 1px #ffffff;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #282828;
+    max-width: 445px;
+
 }
 .novelties__button {
 }
@@ -288,11 +285,16 @@ body {
     .novelties__title {
         max-width: 100%;
     }
+    .novelties__title,
+    .novelties__rectangle {
+        margin: 0 auto 30px auto;
+    }
     .novelties__images {
         display: none;
     }
     .novelties__description {
         flex: 0 1 100%;
+        text-align: center;
     }
 }
 .novelties__main-image {
@@ -313,7 +315,6 @@ body {
 .items-wine__item {
     display: flex;
     border-bottom: 1px solid #ffffff;
-    min-height: 73px;
     max-width: 445px;
     text-shadow: 1px 1px #ffffff;
 }
@@ -333,6 +334,7 @@ body {
 .items-wine__name,
 .items-wine__description {
     color: #282828;
+    white-space: nowrap;
 }
 .items-wine__name {
     margin-bottom: 5px;
@@ -342,6 +344,27 @@ body {
     line-height: 27px;
 }
 .items-wine__description {
+}
+@media (max-width: 991.98px) {
+    .items-wine {
+        align-items: center;
+    }
+    .items-wine__item {
+        max-width: 100%;
+        display: flex;
+    }
+    .items-wine__item {
+        justify-content: space-around;
+    }
+    .items-wine__text {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .items-wine__year {
+        border: none;
+    }
 }
 // /NOVELTIES
 // TASTING
@@ -379,6 +402,12 @@ body {
     width: 260px;
     height: 200px;
     background-image: url("@img/cask.svg");
+}
+@media (max-width: 1187px) {
+    .tasting__content::before,
+    .tasting__content::after {
+        display: none;
+    }
 }
 .tasting__inner-wrapper {
     position: relative;
