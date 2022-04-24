@@ -387,7 +387,7 @@ body {
 }
 @media (max-width: 767.98px) {
     .items-wine__name {
-        line-height: 5px;
+        margin-bottom: 0;
     }
     .items-wine__item {
         align-items: center;
@@ -398,6 +398,13 @@ body {
     .items-wine__year {
         border-right: 1px solid #ffffff;
         padding: 39px 22px;
+    }
+}
+@media (max-width: 479.98px) {
+    .items-wine__name,
+    .items-wine__description {
+        display: inline-block;
+        white-space: normal;
     }
 }
 // /NOVELTIES
@@ -460,6 +467,11 @@ body {
     position: absolute;
     background-color: $DARK-BLOCK-BGC;
 }
+@media (max-width: 767.98px) {
+    .tasting__title {
+        padding: 0;
+    }
+}
 .tasting__subtitle {
     color: #FFFFFF;
     margin-bottom: 80px;
@@ -467,6 +479,11 @@ body {
 .tasting__form {
 }
 @media (max-width: 767.98px) {
+}
+@media (max-width: 600px) {
+    .tasting__content {
+        border: none;
+    }
 }
 //==================================
 .form {
@@ -571,6 +588,33 @@ body {
     .footer__menu .menu__link {
         padding: 17px 5px;
         white-space: nowrap;
+    }
+}
+@media (max-width: 767.98px) {
+    .footer {
+        padding: 25px 0;
+    }
+    .footer__menu {
+        border: 0;
+    }
+    .footer__menu .menu__list .menu__item:nth-child(1),
+    .footer__menu .menu__list .menu__item:nth-child(2),
+    .footer__menu .menu__list .menu__item:nth-child(4) {
+        display: none;
+    }
+    .footer__menu .menu__list .menu__item {
+        flex: 0 1 100%;
+        text-align: center;
+        border-right: 0;
+    }
+    .menu__socials {
+        justify-content: space-around;
+    }
+    .footer__contacts {
+        display: none;
+    }
+    .footer__menu .menu__list {
+        justify-content: space-between;
     }
 }
 // /FOOTER
