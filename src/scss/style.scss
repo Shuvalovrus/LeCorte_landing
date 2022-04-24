@@ -192,6 +192,18 @@ body {
 .preview__button:last-child {
     margin-right: 0;
 }
+@media (max-width: 767.98px) {
+    .preview__buttons {
+        width: 70%;
+        flex-direction: column;
+        gap: 40px;
+        top: 50%;
+    }
+    .preview__button {
+        text-align: center;
+        margin-right: 0;
+    }
+}
 // /PREVIEW-SECTION
 
 // ABOUT-FLAVOR
@@ -215,12 +227,19 @@ body {
     text-align: center;
 }
 .about-flavor__text {
+    text-align: center;
     max-width: 662px;
     margin: 0 auto 50px auto;
     font-weight: $montserrat-regular;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+}
+@media (max-width: 767.98px) {
+    .about-flavor__text {
+        max-width: none;
+        padding: 0 15px;
+    }
 }
 // /ABOUT-FLAVOR
 
@@ -366,6 +385,21 @@ body {
         border: none;
     }
 }
+@media (max-width: 767.98px) {
+    .items-wine__name {
+        line-height: 5px;
+    }
+    .items-wine__item {
+        align-items: center;
+    }
+    .items-wine__text {
+        flex-direction: column;
+    }
+    .items-wine__year {
+        border-right: 1px solid #ffffff;
+        padding: 39px 22px;
+    }
+}
 // /NOVELTIES
 // TASTING
 .tasting {
@@ -376,7 +410,7 @@ body {
 }
 .tasting__content {
     position: relative;
-    padding: 105px 0 80px 0;
+    padding: 105px 10px 80px 10px;
     text-align: center;
     border: 3px solid #C4C4C4;
 }
@@ -432,6 +466,8 @@ body {
 }
 .tasting__form {
 }
+@media (max-width: 767.98px) {
+}
 //==================================
 .form {
     display: flex;
@@ -454,6 +490,19 @@ body {
     background-color: $DARK-BLOCK-BGC;
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
+}
+@media (max-width: 767.98px) {
+    .form__input-container {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .form__input {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+    .form__input::placeholder {
+    }
 }
 .form__select {
     margin-bottom: 50px;
@@ -514,6 +563,15 @@ body {
 }
 .socials-links__item:last-child {
     margin-right: 0;
+}
+@media (max-width: 991.98px) {
+    .footer__menu {
+        font-size: 12px;
+    }
+    .footer__menu .menu__link {
+        padding: 17px 5px;
+        white-space: nowrap;
+    }
 }
 // /FOOTER
 
