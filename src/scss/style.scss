@@ -66,6 +66,9 @@ body {
     font-family: $MONTSERRAT;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
 .title-section {
     font-size: $SECTION-TITLE-FS;
     line-height: 54px;
@@ -111,9 +114,6 @@ body {
     left: 0;
     width: 100%;
     font-size: 14px;
-}
-.header__container {
-
 }
 .header__contacts {
     display: flex;
@@ -164,6 +164,8 @@ body {
 @media (max-width: 767.98px) {
     .header {
         height: 100%;
+    }
+    .header._active {
         z-index: 50;
     }
     .header__container {
@@ -183,16 +185,16 @@ body {
         border: none;
         flex: 0 1 80%;
     }
-    .menu__list {
+    .header__menu .menu__list {
         align-items: flex-start;
         flex-direction: column;
         margin-left: 20px;
     }
-    .menu__item {
+    .header__menu .menu__item {
         border: none;
         margin-bottom: 40px;
     }
-    .menu__link {
+    .header__menu .menu__link {
         font-size: 36px;
     }
     .header__menu-icon {
