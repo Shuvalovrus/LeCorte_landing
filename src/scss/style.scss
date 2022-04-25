@@ -126,6 +126,64 @@ body {
 }
 .header__menu {
 }
+.header__menu-icon {
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    margin: 50px auto;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.icon-menu__rectangle {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background-color: #c4c4c4;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.icon-menu__rectangle:nth-child(1) {
+    top: 0;
+    transform-origin: left center;
+}
+.icon-menu__rectangle:nth-child(2) {
+    top: 18px;
+    transform-origin: left center;
+}
+.icon-menu__rectangle:nth-child(3) {
+    top: 36px;
+    transform-origin: left center;
+}
+@media (max-width: 767.98px) {
+    .header__contacts,
+    .header__menu {
+        display: none;
+    }
+    .header__menu-icon {
+        display: flex;
+    }
+    .header__menu-icon._active .icon-menu__rectangle:nth-child(2){
+        width: 0%;
+        opacity: 0;
+    }
+    .header__menu-icon._active .icon-menu__rectangle:nth-child(1) {
+        transform: rotate(45deg);
+        top: -3px;
+        left: 8px;
+    }
+    .header__menu-icon._active .icon-menu__rectangle:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 39px;
+        left: 8px;
+    }
+}
 //===========================
 .contacts {
 }
