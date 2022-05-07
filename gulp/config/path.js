@@ -12,6 +12,7 @@ const srcFolder = './src'
 // Пути для задач
 export const path = {
     build: {
+        pages: `${buildFolder}/**/*`,
         js: `${buildFolder}/js`,
         css: `${buildFolder}/css`,
         html: `${buildFolder}/`,

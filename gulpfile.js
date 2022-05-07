@@ -21,6 +21,7 @@ import { scss } from "./gulp/tasks/scss.js";
 import { js } from "./gulp/tasks/js.js"
 import { images } from "./gulp/tasks/images.js";
 import { zip } from "./gulp/tasks/zip.js";
+import { gitPush } from "./gulp/tasks/public.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -30,6 +31,7 @@ function watcher() {
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
     gulp.watch(path.watch.images, images);
+
 }
 
 // Основные задачи
@@ -39,10 +41,12 @@ const mainTasks = gulp.parallel(copy,html, scss, js, images);
 const dev = gulp.series(reset,mainTasks,gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZip = gulp.series(reset, mainTasks, zip);
+const push = gulp.series(reset, mainTasks, gitPush)
 // Экспорт сценариев
 export { dev }
 export { build }
 export { deployZip }
+export { push }
 
 // Выполнение сценария по умолчанию
 gulp.task('default',dev);
