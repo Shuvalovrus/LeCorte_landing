@@ -8,7 +8,7 @@
     "dev": "gulp",
     "build": "gulp build --build",
     "zip": "gulp deployZip --build",
-    "gitPush": "gulp pages -d --build"
+    "gitPush": "gulp pages --build"
   },
   "author": "Konstantin",
   "license": "ISC",
